@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs') %>
+
+<body>
+<%- include('./partials/header.ejs') %>
+    <main>
+        <div class="container">
+            <div class="remark-block hide" id="remark-block">
+                <p id="remark-text"></p>
+            </div>
+            <div class="converter-block">
+                <span class="prompt">Введіть суму :</span>
+                <label for="number"><input class="number-input" type="text" id="number" placeholder=''></label>
+                <select name="currency" id="input-currency" class="input-select">
+                    <option value="USD">USD</option>
+                    <option value="UAH">UAH</option>
+                    <option value="EUR">EUR</option>
+                    <option value="RUR">RUR</option>
+                </select>
+                
+                <span class="prompt">Отримати результат в :</span>
+                <div class="radio-box">
+                    <label for="radio-USD"><input value="USD" class="to-curr"  name='radio-currency' type="radio" id="radio-USD">USD</label>
+                    <label for="radio-UAH"><input value="UAH" class="to-curr" checked name='radio-currency' type="radio" id="radio-UAH">UAH</label>
+                    <label for="radio-EUR"><input value="EUR" class="to-curr" name='radio-currency' type="radio" id="radio-EUR">EUR</label>
+                    <label for="radio-RUR"><input value="RUR" class="to-curr" name='radio-currency' type="radio" id="radio-RUR">RUR</label>
+                </div>
+                <button id="count" class="btn">Порахувати</button>
+                <span class="prompt">Результат :</span>
+                <div id="out" class="output"></div>
+            </div>
+        </div>
+    </main>
+    <script src="/script/main.js"></script>
+</body>
+
+</html>
